@@ -119,6 +119,13 @@ class ProductReview {
 	public $orderId;
 
 	/**
+	 * Zákazník doporučuje obchod
+	 *
+	 * @var number|null
+	 */
+	public $recommends;
+
+	/**
 	 * @return array
 	 */
 	function getAsArray() {

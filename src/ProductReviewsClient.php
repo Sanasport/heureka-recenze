@@ -88,6 +88,12 @@ class ProductReviewsClient extends BaseClient {
 			$review->rating = null;
 		}
 
+		if (count($reviewElement->recommends)) {
+			$review->recommends = (int)$reviewElement->recommends;
+		} else {
+			$review->recommends = null;
+		}
+
 		$prodId = $this->resolveId($review);
 		$review->productId = $prodId;
 

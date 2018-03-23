@@ -66,6 +66,12 @@ class EshopReviewsClient extends BaseClient {
 			$review->ratingWebUsability = null;
 		}
 
+		if (count($element->recommends)) {
+			$review->recommends = (int)$element->recommends;
+		} else {
+			$review->recommends = null;
+		}
+
 		$review->ratingId = (int)$element->rating_id;
 		$review->reaction = (string)$element->reaction;
 		$review->summary = (string)$element->summary;
